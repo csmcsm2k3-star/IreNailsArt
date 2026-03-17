@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Ire Nails Art | Nail Studio · Valencia</title>
+  <meta name="description" content="Diseños exclusivos de uñas en Valencia. Manicura, gel, acrílico, nail art y más. Reserva tu cita por WhatsApp.">
+  <meta name="keywords" content="nail studio, uñas, manicura, gel, acrílico, nail art, Valencia">
+  <meta name="author" content="Ire Nails Art">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ire Nails Art | Nail Studio · Valencia">
+  <meta property="og:description" content="El arte en tus manos, la elegancia en tus uñas. Reserva tu cita hoy.">
+  <meta property="og:type" content="website">
+  <!-- <meta property="og:image" content="images/logo/og-image.jpg"> -->
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Favicon (coloca tu favicon en images/logo/favicon.ico) -->
+  <!-- <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico"> -->
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════
+     NAVIGATION
+     ═══════════════════════════ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <!--
+      LOGO: coloca tu logo en images/logo/logo.png y descomenta la línea siguiente.
+      <img src="images/logo/logo.png" alt="Ire Nails Art Logo">
+    -->
+    Ire<span>Nails</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#gallery">Diseños</a></li>
+    <li><a href="#services">Servicios</a></li>
+    <li><a href="#reviews">Reseñas</a></li>
+    <li><a href="#location">Ubicación</a></li>
+    <li><a href="#booking">Cita</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <button class="mobile-close" onclick="toggleMenu()" aria-label="Cerrar menú">✕</button>
+  <a href="#gallery"  onclick="toggleMenu()">Diseños</a>
+  <a href="#services" onclick="toggleMenu()">Servicios</a>
+  <a href="#reviews"  onclick="toggleMenu()">Reseñas</a>
+  <a href="#location" onclick="toggleMenu()">Ubicación</a>
+  <a href="#booking"  onclick="toggleMenu()">Reservar Cita</a>
+</div>
+
+
+<!-- ═══════════════════════════
+     HERO
+     ═══════════════════════════ -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Nail Studio · Valencia</p>
+    <h1 class="hero-title">
+      El arte en<br>
+      tus <em>manos</em>,<br>
+      la elegancia<br>
+      en tus uñas
+    </h1>
+    <p class="hero-desc">
+      Diseños exclusivos, productos premium y una experiencia que va más allá
+      de una simple manicura. Cada uña, una obra de arte.
+    </p>
+    <div class="hero-btns">
+      <a href="#booking" class="btn-primary" id="heroBookBtn">
+        Reservar cita
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="#gallery" class="btn-outline" id="heroGalleryBtn">Ver diseños</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Clientas felices</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Años de experiencia</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">4.9★</span>
+        <span class="stat-label">Valoración media</span>
+      </div>
+    </div>
+  </div><!-- /hero-left -->
+
+  <div class="hero-right">
+    <div class="hero-image-grid">
+      <!--
+        HERO IMAGES: coloca tus fotos en images/hero/
+        Nombres sugeridos: hero-1.jpg, hero-2.jpg, hero-3.jpg, hero-4.jpg
+        Reemplaza los src de Unsplash con tus propias imágenes cuando estén listas.
+      -->
+      <div class="hero-img">
+        <img src="images/hero/hero-1.jpg"
+             onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80'"
+             alt="Diseño de uñas" loading="lazy">
+      </div>
+      <div class="hero-img">
+        <img src="images/hero/hero-2.jpg"
+             onerror="this.src='https://images.unsplash.com/photo-1632345031435-8727f592d8db?w=400&q=80'"
+             alt="Uñas elegantes" loading="lazy">
+      </div>
+      <div class="hero-img">
+        <img src="images/hero/hero-3.jpg"
+             onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80'"
+             alt="Nail art" loading="lazy">
+      </div>
+      <div class="hero-img">
+        <img src="images/hero/hero-4.jpg"
+             onerror="this.src='https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=400&q=80'"
+             alt="Manicura" loading="lazy">
+      </div>
+    </div>
+  </div><!-- /hero-right -->
+</section>
+
+
+<!-- ═══════════════════════════
+     GALLERY
+     ═══════════════════════════ -->
+<section id="gallery">
+  <div class="section-header">
+    <span class="section-tag">Nuestros trabajos</span>
+    <h2 class="section-title">Diseños que <em>enamoran</em></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="gallery-filter">
+    <button class="filter-btn active" data-filter="all" id="filterAll">Todos</button>
+    <button class="filter-btn" data-filter="french"   id="filterFrench">French</button>
+    <button class="filter-btn" data-filter="gel"      id="filterGel">Gel</button>
+    <button class="filter-btn" data-filter="arte"     id="filterArte">Nail Art</button>
+    <button class="filter-btn" data-filter="acrílico" id="filterAcrilico">Acrílico</button>
+  </div>
+
+  <div class="gallery-grid">
+    <!--
+      GALLERY IMAGES: coloca tus fotos en images/gallery/
+      Nombres sugeridos: french-1.jpg, french-2.jpg, gel-1.jpg, gel-2.jpg,
+      arte-1.jpg, arte-2.jpg, acrilico-1.jpg, acrilico-2.jpg
+      El atributo onerror carga una imagen de Unsplash como respaldo temporal.
+    -->
+
+    <!-- French -->
+    <div class="gallery-item" data-category="french" onclick="openLightbox(this)" id="galleryFrench1">
+      <img src="images/gallery/french-1.jpg"
+           onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=85'"
+           alt="French manicure clásica">
+      <div class="gallery-overlay">
+        <span class="tag-pill">French</span>
+        <span>French Clásico</span>
+      </div>
+    </div>
+
+    <!-- Gel -->
+    <div class="gallery-item" data-category="gel" onclick="openLightbox(this)" id="galleryGel1">
+      <img src="images/gallery/gel-1.jpg"
+           onerror="this.src='https://images.unsplash.com/photo-1632345031435-8727f592d8db?w=500&q=85'"
+           alt="Uñas de gel semipermanente">
+      <div class="gallery-overlay">
+        <span class="tag-pill">Gel</span>
+        <span>Semipermanente Rosa</span>
+      </div>
+    </div>
+
+    <!-- Nail Art -->
+    <div class="gallery-item" data-category="arte" onclick="openLightbox(this)" id="galleryArte1">
+      <img src="images/gallery/arte-1.jpg"
+           onerror="this.src='https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&q=85'"
+           alt="Nail art floral">
+      <div class="gallery-overlay">
+        <span class="tag-pill">Nail Art</span>
+        <span>Arte Floral</span>
+      </div>
+    </div>
+
+    <!-- Acrílico -->
+    <div class="gallery-item" data-category="acrílico" onclick="openLightbox(this)" id="galleryAcrilico1">
+      <img src="images/gallery/acrilico-1.jpg"
+           onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=85'"
+           alt="Uñas acrílicas nude">
+      <div class="gallery-overlay">
+        <span class="tag-pill">Acrílico</span>
+        <span>Acrílico Nude</span>
+      </div>
+    </div>
+
+    <!-- French 2 -->
+    <div class="gallery-item" data-category="french" onclick="openLightbox(this)" id="galleryFrench2">
+      <img src="images/gallery/french-2.jpg"
+           onerror="this.src='https://images.unsplash.com/photo-1632345031435-8727f592d8db?w=500&q=85'"
+           alt="French manicure moderno">
+      <div class="gallery-overlay">
+        <span class="tag-pill">French</span>
+        <span>French Moderno</span>
+      </div>
+    </div>
+
+    <!-- Gel 2 -->
+    <div class="gallery-item" data-category="gel" onclick="openLightbox(this)" id="galleryGel2">
+      <img src="images/gallery/gel-2.jpg"
+           onerror="this.src='https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&q=85'"
+           alt="Gel rojo pasión">
+      <div class="gallery-overlay">
+        <span class="tag-pill">Gel</span>
+        <span>Gel Rojo Pasión</span>
+      </div>
+    </div>
+
+    <!-- Nail Art 2 -->
+    <div class="gallery-item" data-category="arte" onclick="openLightbox(this)" id="galleryArte2">
+      <img src="images/gallery/arte-2.jpg"
+           onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=85'"
+           alt="Arte geométrico en uñas">
+      <div class="gallery-overlay">
+        <span class="tag-pill">Nail Art</span>
+        <span>Arte Geométrico</span>
+      </div>
+    </div>
+
+    <!-- Acrílico 2 -->
+    <div class="gallery-item" data-category="acrílico" onclick="openLightbox(this)" id="galleryAcrilico2">
+      <img src="images/gallery/acrilico-2.jpg"
+           onerror="this.src='https://images.unsplash.com/photo-1632345031435-8727f592d8db?w=500&q=85'"
+           alt="Acrílico efecto mármol">
+      <div class="gallery-overlay">
+        <span class="tag-pill">Acrílico</span>
+        <span>Efecto Mármol</span>
+      </div>
+    </div>
+  </div><!-- /gallery-grid -->
+</section>
+
+
+<!-- ═══════════════════════════
+     SERVICES
+     ═══════════════════════════ -->
+<section id="services">
+  <div class="section-header">
+    <span class="section-tag">Lo que ofrecemos</span>
+    <h2 class="section-title">Nuestros <em>servicios</em></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon" aria-hidden="true">💅</span>
+      <div class="service-name">Manicura Clásica</div>
+      <p class="service-desc">Limado, cutículas, masaje y esmalte tradicional. La base perfecta para unas manos cuidadas.</p>
+      <span class="service-price">desde 18€</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon" aria-hidden="true">✨</span>
+      <div class="service-name">Gel &amp; Semipermanente</div>
+      <p class="service-desc">Duración de hasta 3 semanas. Brillo intenso, secado rápido y cientos de tonos disponibles.</p>
+      <span class="service-price">desde 30€</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon" aria-hidden="true">🔮</span>
+      <div class="service-name">Uñas Acrílicas</div>
+      <p class="service-desc">Extensiones resistentes y personalizables. Perfectas para quienes desean largo y forma a medida.</p>
+      <span class="service-price">desde 45€</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon" aria-hidden="true">🎨</span>
+      <div class="service-name">Nail Art</div>
+      <p class="service-desc">Diseños exclusivos, pedrería, efecto mármol, florales… Arte personalizado para cada ocasión.</p>
+      <span class="service-price">desde 10€ extra</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon" aria-hidden="true">🌸</span>
+      <div class="service-name">Pedicura Spa</div>
+      <p class="service-desc">Exfoliación, masaje relajante, hidratación profunda y esmaltado. Un lujo para tus pies.</p>
+      <span class="service-price">desde 35€</span>
+    </div>
+    <div class="service-card">
+      <span class="service-icon" aria-hidden="true">👰</span>
+      <div class="service-name">Pack Novia &amp; Eventos</div>
+      <p class="service-desc">Paquetes completos para bodas, comuniones y eventos especiales. Consulta para grupos.</p>
+      <span class="service-price">desde 90€</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════
+     REVIEWS
+     ═══════════════════════════ -->
+<section id="reviews">
+  <div class="section-header">
+    <span class="section-tag">Lo que dicen de nosotras</span>
+    <h2 class="section-title">Reseñas de <em>clientes</em></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="reviews-carousel" role="region" aria-label="Carrusel de reseñas">
+    <div class="reviews-track" id="reviewsTrack">
+
+      <div class="review-slide">
+        <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="review-text">"Llevo más de dos años viniendo y nunca me han decepcionado. El resultado siempre supera mis expectativas y el trato es inmejorable."</p>
+        <span class="review-author">— María G., clienta habitual</span>
+      </div>
+
+      <div class="review-slide">
+        <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="review-text">"Me hicieron las uñas para mi boda y quedaron absolutamente perfectas. Todas mis invitadas me preguntaron dónde me las había hecho."</p>
+        <span class="review-author">— Laura M., novia feliz</span>
+      </div>
+
+      <div class="review-slide">
+        <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="review-text">"El ambiente es precioso, muy relajante. Los diseños son únicos y los productos de muy buena calidad. ¡Totalmente recomendable!"</p>
+        <span class="review-author">— Sofía R., nueva clienta</span>
+      </div>
+
+      <div class="review-slide">
+        <div class="review-stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="review-text">"Reservé por WhatsApp y en minutos me confirmaron la cita. Súper fácil y cómodo. El resultado de mis acrílicas fue espectacular."</p>
+        <span class="review-author">— Elena P., clienta frecuente</span>
+      </div>
+
+      <div class="review-slide">
+        <div class="review-stars" aria-label="4 estrellas">★★★★☆</div>
+        <p class="review-text">"Muy profesionales y atentas. Me asesoraron sobre qué diseño quedaba mejor con mi tono de piel. ¡Salí encantada!"</p>
+        <span class="review-author">— Carmen V., primera visita</span>
+      </div>
+
+    </div><!-- /reviews-track -->
+
+    <div class="carousel-arrows">
+      <button class="carr-btn" onclick="prevSlide()" aria-label="Reseña anterior">&#8592;</button>
+      <button class="carr-btn" onclick="nextSlide()" aria-label="Siguiente reseña">&#8594;</button>
+    </div>
+    <div class="carousel-nav" id="carouselDots" role="tablist" aria-label="Navegación del carrusel"></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════
+     LOCATION
+     ═══════════════════════════ -->
+<section id="location">
+  <div class="section-header">
+    <span class="section-tag">Encuéntranos</span>
+    <h2 class="section-title">¿Dónde <em>estamos</em>?</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="location-wrapper">
+    <div class="location-info">
+      <h3>Ire Nails Art</h3>
+
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true">📍</div>
+        <div class="info-text">
+          <strong>Dirección</strong>
+          <p>Calle Gran Vía, 45, Bajo<br>46002 Valencia, España</p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true">🕐</div>
+        <div class="info-text">
+          <strong>Horario</strong>
+          <p>Lunes a Viernes: 10:00 – 20:00<br>Sábados: 10:00 – 18:00<br>Domingos: Cerrado</p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true">📞</div>
+        <div class="info-text">
+          <strong>Teléfono / WhatsApp</strong>
+          <p>+34 612 345 678</p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true">📧</div>
+        <div class="info-text">
+          <strong>Email</strong>
+          <p>hola@irenailsart.es</p>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <a href="#booking" class="btn-primary" id="locationBookBtn">
+          Reservar ahora
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div><!-- /location-info -->
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.1234567890!2d-0.3762881!3d39.4699075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4cf0efb06f%3A0xb4a35e66b8a38058!2sGran%20Via%20Ferran%20el%20Cat%C3%B2lic%2C%20Valencia!5e0!3m2!1ses!2ses!4v1710000000000"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa Ire Nails Art Valencia">
+      </iframe>
+    </div>
+  </div><!-- /location-wrapper -->
+</section>
+
+
+<!-- ═══════════════════════════
+     BOOKING / WHATSAPP CTA
+     ═══════════════════════════ -->
+<section id="booking">
+  <span class="section-tag">Agenda tu sesión</span>
+  <h2 class="section-title">¿Lista para tus uñas<br><em>soñadas</em>?</h2>
+  <div class="section-line"></div>
+  <p class="booking-desc">
+    Reserva tu cita de forma rápida y sencilla a través de WhatsApp.
+    Escríbenos y te confirmamos disponibilidad en minutos.
+  </p>
+  <a
+    href="https://wa.me/34612345678?text=¡Hola!%20Me%20gustaría%20reservar%20una%20cita%20en%20Ire%20Nails%20Art.%20¿Podríais%20indicarme%20vuestra%20disponibilidad?%20Muchas%20gracias%20😊"
+    target="_blank" rel="noopener noreferrer"
+    class="wa-btn" id="bookingWaBtn">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    Reservar por WhatsApp
+  </a>
+</section>
+
+
+<!-- ═══════════════════════════
+     FOOTER
+     ═══════════════════════════ -->
+<footer>
+  <div class="footer-logo">
+    <!--
+      LOGO en footer: descomenta la línea siguiente cuando tengas tu logo listo.
+      <img src="images/logo/logo-white.png" alt="Ire Nails Art">
+    -->
+    Ire<span>Nails</span>
+  </div>
+  <p class="footer-tagline">El arte en tus manos · Valencia</p>
+  <nav class="footer-links" aria-label="Pie de página">
+    <a href="#hero">Inicio</a>
+    <a href="#gallery">Diseños</a>
+    <a href="#services">Servicios</a>
+    <a href="#reviews">Reseñas</a>
+    <a href="#location">Ubicación</a>
+    <a href="#booking">Cita</a>
+  </nav>
+  <p class="footer-copy">© 2026 Ire Nails Art · Todos los derechos reservados</p>
+</footer>
+
+
+<!-- ═══════════════════════════
+     WHATSAPP FLOATING BUTTON
+     ═══════════════════════════ -->
+<a
+  href="https://wa.me/34612345678?text=¡Hola!%20Me%20gustaría%20reservar%20una%20cita%20en%20Ire%20Nails%20Art.%20¿Podríais%20indicarme%20vuestra%20disponibilidad?%20Muchas%20gracias%20😊"
+  class="wa-float" target="_blank" rel="noopener noreferrer"
+  aria-label="Contactar por WhatsApp" id="waFloatBtn">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+
+
+<!-- ═══════════════════════════
+     LIGHTBOX
+     ═══════════════════════════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <button class="lb-close" onclick="closeLightbox()" aria-label="Cerrar imagen">✕</button>
+  <img id="lightboxImg" src="" alt="Diseño ampliado">
+</div>
+
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Coloca aquí tus fotos de la galería.
+Nombres recomendados:
+  - french-1.jpg, french-2.jpg
+  - gel-1.jpg, gel-2.jpg
+  - arte-1.jpg, arte-2.jpg
+  - acrilico-1.jpg, acrilico-2.jpg
+
+Tamaño recomendado: 600 × 800 px (relación 3:4)
+Consulta images/README.md para más detalles.

@@ -1,0 +1,6 @@
+Coloca aquí tu logo principal (fondo transparente).
+Nombre recomendado: logo.png
+Tamaño: ~200 × 60 px
+
+Para activarlo en la web, abre index.html y descomenta
+las líneas marcadas con <!-- LOGO: ... -->
