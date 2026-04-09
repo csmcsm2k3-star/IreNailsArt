@@ -329,7 +329,14 @@
       <div class="section-line"></div>
     </div>
 
-    <div class="reviews-carousel" role="region" aria-label="Carrusel de reseñas">
+    <!-- Botón para abrir formulario -->
+    <div class="reviews-toggle-wrap" id="reviewsToggleWrap">
+      <button class="btn-review-toggle" onclick="openReviewForm()" id="openReviewBtn">
+        ✦ Dejar una reseña
+      </button>
+    </div>
+
+    <div class="reviews-carousel" id="reviewsCarousel" role="region" aria-label="Carrusel de reseñas">
       <div class="reviews-track" id="reviewsTrack">
 
         <div class="review-slide">
@@ -377,7 +384,7 @@
     </div>
 
     <!-- ── REVIEW SUBMISSION FORM ── -->
-    <div class="review-form-section">
+    <div class="review-form-section" id="reviewFormSection" hidden>
       <h3 class="review-form-title">Deja tu <em>reseña</em></h3>
       <form class="review-form" id="reviewForm" onsubmit="submitReview(event)" novalidate>
 
@@ -420,12 +427,15 @@
 
         <div id="rFormError" class="rform-error" role="alert" aria-live="polite"></div>
 
-        <button type="submit" class="btn-primary">
-          Enviar reseña por WhatsApp
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </button>
+        <div class="rform-actions">
+          <button type="submit" class="btn-primary">
+            Enviar reseña por WhatsApp
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <button type="button" class="btn-cancel-review" onclick="closeReviewForm()">Cancelar</button>
+        </div>
         <p class="rform-note">Tu reseña nos llegará por WhatsApp y la publicaremos encantadas 💅</p>
       </form>
     </div>

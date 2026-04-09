@@ -109,6 +109,28 @@ document.getElementById('starPicker').addEventListener('mouseleave', () => {
   starPicks.forEach(s => s.classList.remove('hovered'));
 });
 
+/* ── REVIEW FORM TOGGLE ── */
+function openReviewForm() {
+  document.getElementById('reviewsCarousel').hidden  = true;
+  document.getElementById('reviewsToggleWrap').hidden = true;
+  const formSection = document.getElementById('reviewFormSection');
+  formSection.hidden = false;
+  formSection.classList.add('reviews-fade');
+}
+
+function closeReviewForm() {
+  document.getElementById('reviewFormSection').hidden  = true;
+  document.getElementById('reviewsCarousel').hidden    = false;
+  const toggleWrap = document.getElementById('reviewsToggleWrap');
+  toggleWrap.hidden = false;
+  toggleWrap.classList.add('reviews-fade');
+  // Reset form
+  document.getElementById('reviewForm').reset();
+  starPicks.forEach(s => s.classList.remove('selected', 'hovered'));
+  rStarsHidden.value = '';
+  document.getElementById('rFormError').textContent = '';
+}
+
 /* ── REVIEW FORM SUBMIT ── */
 function submitReview(e) {
   e.preventDefault();
@@ -131,4 +153,7 @@ function submitReview(e) {
   if (comment) msg += `\n"${comment}"`;
 
   window.open(`https://wa.me/34601236665?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+
+  // Cerrar formulario y volver al carrusel
+  closeReviewForm();
 }
