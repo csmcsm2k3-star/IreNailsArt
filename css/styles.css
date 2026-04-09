@@ -50,7 +50,8 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(139,74,66,.08); }
 .nav-logo span { color: var(--gold); font-style: italic; }
 
 .nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a {
+.nav-links a,
+#navbar .nav-links a {
   text-decoration: none; color: #8b4a42 !important;
   font-size: .85rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
   position: relative; padding-bottom: 2px;
