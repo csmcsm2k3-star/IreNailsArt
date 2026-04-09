@@ -81,3 +81,54 @@ track.addEventListener('touchend',   e => {
   const diff = touchStartX - e.changedTouches[0].clientX;
   if (Math.abs(diff) > 40) diff > 0 ? nextSlide() : prevSlide();
 });
+
+/* ── STAR PICKER ── */
+const starPicks  = document.querySelectorAll('.star-pick');
+const rStarsHidden = document.getElementById('rStars');
+
+starPicks.forEach(star => {
+  // Click to select
+  star.addEventListener('click', () => {
+    const val = parseInt(star.dataset.val);
+    rStarsHidden.value = val;
+    starPicks.forEach((s, i) => {
+      s.classList.toggle('selected', i < val);
+    });
+  });
+  // Keyboard support
+  star.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); star.click(); }
+  });
+  // Hover preview
+  star.addEventListener('mouseenter', () => {
+    const val = parseInt(star.dataset.val);
+    starPicks.forEach((s, i) => s.classList.toggle('hovered', i < val));
+  });
+});
+document.getElementById('starPicker').addEventListener('mouseleave', () => {
+  starPicks.forEach(s => s.classList.remove('hovered'));
+});
+
+/* ── REVIEW FORM SUBMIT ── */
+function submitReview(e) {
+  e.preventDefault();
+  const name      = document.getElementById('rName').value.trim();
+  const visitEl   = document.querySelector('input[name="visitType"]:checked');
+  const stars     = rStarsHidden.value;
+  const comment   = document.getElementById('rComment').value.trim();
+  const errorEl   = document.getElementById('rFormError');
+
+  if (!name)    { errorEl.textContent = 'Por favor, introduce tu nombre.'; return; }
+  if (!visitEl) { errorEl.textContent = 'Por favor, selecciona el tipo de visita.'; return; }
+  if (!stars)   { errorEl.textContent = 'Por favor, selecciona una puntuación.'; return; }
+  errorEl.textContent = '';
+
+  const starsStr = '★'.repeat(parseInt(stars)) + '☆'.repeat(5 - parseInt(stars));
+  let msg = `*Nueva reseña — Ire Nails Art*\n\n`;
+  msg += `👤 Nombre: ${name}\n`;
+  msg += `🗓 Visita: ${visitEl.value}\n`;
+  msg += `${starsStr} (${stars}/5)\n`;
+  if (comment) msg += `\n"${comment}"`;
+
+  window.open(`https://wa.me/34601236665?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+}
